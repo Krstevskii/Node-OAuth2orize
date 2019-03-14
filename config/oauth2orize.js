@@ -43,3 +43,10 @@ server.exchange(oauth2orize.exchange.code({
         })
 
 }));
+
+server.serializeClient((application, done) => done(null, application.id));
+server.deserializeClient((id, done) => {
+    Application.findById(id)
+        .then(app => done(null, app), err => done(err))
+        .catch(err => done(err));
+})
