@@ -23,4 +23,6 @@ const ApplicationSchema = new Schema({
         type: Schema.Types.ObjectId, ref: 'User'
     }
 
-})
+});
+
+module.exports = Application = mongoose.model('Application', ApplicationSchema);
