@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d688076-5617-4d8b-a784-340a897586ea" name="Default Changelist" comment="" />
+    <list default="true" id="9d688076-5617-4d8b-a784-340a897586ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/config/oauth2orize.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/oauth2orize.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -40,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/AccessToken.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+            <state relative-caret-position="458">
+              <caret line="48" column="80" selection-start-line="48" selection-start-column="80" selection-end-line="48" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -67,9 +69,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/oauth2orize.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -129,6 +135,7 @@
         <option value="$PROJECT_DIR$/models/GrantCode.js" />
         <option value="$PROJECT_DIR$/models/Application.js" />
         <option value="$PROJECT_DIR$/models/AccessToken.js" />
+        <option value="$PROJECT_DIR$/config/oauth2orize.js" />
       </list>
     </option>
   </component>
@@ -211,19 +218,18 @@
       <option name="presentableId" value="Default" />
       <updated>1552396354292</updated>
       <workItem from="1552396355418" duration="14275000" />
-      <workItem from="1552568595787" duration="8523000" />
+      <workItem from="1552568595787" duration="9083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22798000" />
+    <option name="totallyTimeSpent" value="23358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19071038" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19071038" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -235,7 +241,7 @@
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" />
-      <window_info anchor="bottom" x="1920" y="385" width="1280" height="309" id="Terminal" order="10" visible="true" weight="0.28399122" />
+      <window_info active="true" anchor="bottom" x="1920" y="385" width="1280" height="309" id="Terminal" order="10" visible="true" weight="0.28399122" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -364,9 +370,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/oauth2orize.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/users/register.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -404,8 +407,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/AccessToken.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+        <state relative-caret-position="458">
+          <caret line="48" column="80" selection-start-line="48" selection-start-column="80" selection-end-line="48" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/oauth2orize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
         </state>
       </provider>
     </entry>
