@@ -1,0 +1,25 @@
+{
+  "name": "oauth2",
+  "version": "1.0.0",
+  "description": "oauth2 oauth2orize POC",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.4.19",
+    "oauth2orize": "^1.11.0",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "path": "^0.12.7"
+  }
+}
