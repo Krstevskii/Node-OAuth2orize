@@ -14,14 +14,14 @@ const ApplicationSchema = new Schema({
     },
 
     oauth_secret: {
-        type: String, unique: true, default: async function() {
+        type: String, unique: true, default: async function () {
             return await uid(256);
         }
     },
 
-    userId: {
-        type: Schema.Types.ObjectId, ref: 'User'
-    }
+    domains: [{
+        type: String
+    }]
 
 });
 
