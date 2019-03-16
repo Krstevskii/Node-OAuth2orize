@@ -19,6 +19,12 @@ mongoose.connect('mongodb://localhost:27017/oauth2', {useNewUrlParser: true})
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+// Add data to template engine
+app.use((req, res, next) => {
+    res.locals.user = req.user || null;
+    next();
+});
+
 // Session Middleware
 app.use(session({
     saveUninitialized: true,
