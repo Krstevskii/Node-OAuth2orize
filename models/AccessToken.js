@@ -36,7 +36,7 @@ const AccessTokenSchema = new Schema({
 
     active: {
         type: Boolean, get: function (value) {
-            if (expires < new Date() || !value) {
+            if (this.expires < new Date() || !value) {
                 return false;
             } else {
                 return value;

@@ -58,9 +58,27 @@ router.post('/finish', (req, res, next) => {
 
     }, server.decision((req, done) => {
         done(null, {scope: req.oauth2.req.scope});
-        console.log('User:');
-        console.log(req.user);
     })
 );
+
+router.post('/exchange', (req, res, next) => {
+
+    const appID = req.body.client_id;
+    const appSecret = req.body.client_secret;
+
+    Application.findOne({
+        oauth_id: appID, oauth_secret: appSecret
+    })
+        .then(app => {
+            if (!app) {
+                next(new Error('There was no application with the ApllicationID and Application Secret'));
+            } else {
+                req.app = app;
+                next()
+            }
+
+        }, err => next(err))
+
+}, server.token(), server.errorHandler());
 
 module.exports = router;

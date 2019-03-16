@@ -29,7 +29,7 @@ server.grant(oauth2orize.grant.code({
 server.exchange(oauth2orize.exchange.code({
     userProperty: 'app'
 }, (application, code, redirectURI, done) => {
-
+    console.log(application);
     GrantCode.findOne({code: code})
         .then(grant => {
             if (grant && grant.active && grant.application == application.id) {
