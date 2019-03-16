@@ -19,11 +19,8 @@ mongoose.connect('mongodb://localhost:27017/oauth2', {useNewUrlParser: true})
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-// Add data to template engine
-app.use((req, res, next) => {
-    res.locals.user = req.user || null;
-    next();
-});
+// Load Passport config
+require('./config/passport')(passport);
 
 // Session Middleware
 app.use(session({
@@ -36,8 +33,11 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Load Passport config
-require('./config/passport')(passport);
+// Add data to template engine
+app.use((req, res, next) => {
+    res.locals.user = req.user || null;
+    next();
+});
 
 // Handlebars Template Engine Configuration
 app.set('views', path.join(__dirname, '/views'));

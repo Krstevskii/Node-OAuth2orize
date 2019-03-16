@@ -9,15 +9,15 @@ module.exports = function (passport) {
     }, (username, password, done) => {
         User.findOne({username: username})
             .then(user => {
-                if(!user)
+                if (!user)
                     return done(null, false);
 
                 bcrypt.compare(password, user.password, (err, isMatch) => {
-                    if(!isMatch)
+                    if (!isMatch)
                         return done(null, false);
 
                     done(null, user);
-                })
+                });
             })
             .catch(err => done(err));
     }));
@@ -29,9 +29,8 @@ module.exports = function (passport) {
     passport.deserializeUser((id, done) => {
         User.findById({id})
             .then(usr => {
-                if(!usr)
+                if (!usr)
                     done(null, false);
-
                 done(null, usr)
             }, err => done(err));
     })

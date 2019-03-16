@@ -29,7 +29,7 @@ router.get('/start', server.authorize((applicationID, redirectURI, done) => {
     const scope = {
         account: 'view account'
     };
-
+    console.log('User:' + req.user);
     res.render('oauth/oauth', {
         transaction_id: req.oauth2.transactionID,
         currentURL: req.originalUrl,
@@ -46,17 +46,20 @@ router.post('/finish', (req, res, next) => {
         if (req.user) {
             next();
         } else {
-            passport.authenticate('local', {session: false}, (err, user, info) => {
+            passport.authenticate('local', {}, (err, user, info) => {
                 if (user) {
                     next();
                 } else if (!err) {
                     res.redirect(req.body.auth_url);
                 }
             })(req, res, next);
+            // res.render('home');
         }
 
     }, server.decision((req, done) => {
-        done(null, {scope: req.oauth2.req.scope})
+        done(null, {scope: req.oauth2.req.scope});
+        console.log('User:');
+        console.log(req.user);
     })
 );
 
