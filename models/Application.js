@@ -10,12 +10,14 @@ const ApplicationSchema = new Schema({
     },
 
     oauth_id: {
-        type: Number, unique: true
+        type: String, unique: true, default: () => {
+            return uid.sync(256);
+        },
     },
 
     oauth_secret: {
-        type: String, unique: true, default: async function () {
-            return await uid(256);
+        type: String, unique: true, default: () => {
+            return uid.sync(256);
         }
     },
 
@@ -23,6 +25,6 @@ const ApplicationSchema = new Schema({
         type: String
     }]
 
-});
+})
 
 module.exports = Application = mongoose.model('Application', ApplicationSchema);

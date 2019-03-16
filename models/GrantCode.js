@@ -4,8 +4,8 @@ const uid = require('uid-safe');
 const Schema = mongoose.Schema;
 const GrantCodeSchema = new Schema({
     code: {
-        type: String, unique: true, default: async function () {
-            return await uid(256);
+        type: String, unique: true, default: () => {
+            return uid.sync(256);
         }
     },
 

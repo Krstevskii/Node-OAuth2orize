@@ -20,6 +20,7 @@
     "oauth2orize": "^1.11.0",
     "passport": "^0.4.0",
     "passport-http-bearer": "^1.0.1",
+    "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "uid-safe": "^2.1.5"
   }

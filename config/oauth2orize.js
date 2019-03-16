@@ -10,6 +10,10 @@ server.grant(oauth2orize.grant.code({
     scopeSeparator: [' ', ',']
 }, (application, redirectURI, user, ares, done) => {
 
+    console.log(application);
+    console.log(redirectURI);
+    console.log(user);
+    console.log(ares.scope);
     const grant = new GrantCode({
         application: application,
         user: user,
@@ -49,4 +53,5 @@ server.deserializeClient((id, done) => {
     Application.findById(id)
         .then(app => done(null, app), err => done(err))
         .catch(err => done(err));
-})
+});
+module.exports = server;

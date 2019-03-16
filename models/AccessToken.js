@@ -6,8 +6,8 @@ const Schema = mongoose.Schema;
 const AccessTokenSchema = new Schema({
 
     token: {
-        type: String, unique: true, default: async function () {
-            return await uid(256);
+        type: String, unique: true, default: () => {
+            return uid.sync(256);
         }
     },
 

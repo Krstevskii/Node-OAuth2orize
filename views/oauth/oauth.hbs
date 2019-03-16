@@ -1,0 +1,28 @@
+<h1>Authorize</h1>
+<form method="post" action="/auth/finish">
+    <input type="hidden" name="transaction_id" value="{{transaction_id}}">
+    <input type="hidden" name="response_type" value="{{response_type}}">
+    <input type="hidden" name="client_id" value="{{application.oauth_id}}">
+    <input type="hidden" name="auth_url" value="{{currentURL}}">
+    <input type="hidden" name="scope" value="{{scope}}">
+    <p>{{application.title}} requires permission to</p>
+    {{#each scope}}
+        <p style="color: red;">{{this}}</p>
+    {{/each}}
+    {{#if user}}
+        <p>Click <em>Authorize</em> to allow this app to connect to your account</p>
+    {{else}}
+        <p>Sign in below to allow this app to connect with your account</p>
+    {{/if}}
+
+    {{#if user}}
+        <p>Signed in as {{user.username}}</p>
+        <a href="/logout?next={{currentURL}}">Not {{user.username}}?</a>
+        <button type="submit">Authorize</button>
+    {{else}}
+        <input type="text" name="username" placeholder="enter username">
+        <input type="password" name="password" placeholder="enter password">
+        <button type="submit">Authorize</button>
+    {{/if}}
+</form>
+

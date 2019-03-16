@@ -4,7 +4,9 @@ const User = require('../models/User');
 const router = express.Router();
 
 router.get('/register', (req, res) => {
-    res.render('users/register');
+    res.render('users/register', {
+        title: 'Users | Register'
+    });
 });
 
 // @route   POST /api/users
