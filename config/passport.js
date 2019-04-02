@@ -21,17 +21,17 @@ module.exports = function (passport) {
             })
             .catch(err => done(err));
     }));
-
-    passport.serializeUser((user, done) => {
-        done(null, user.id)
-    });
-
-    passport.deserializeUser((id, done) => {
-        User.findById({id})
-            .then(usr => {
-                if (!usr)
-                    done(null, false);
-                done(null, usr)
-            }, err => done(err));
-    })
+    //
+    // passport.serializeUser((user, done) => {
+    //     done(null, user.id)
+    // });
+    //
+    // passport.deserializeUser((id, done) => {
+    //     User.findById({id})
+    //         .then(usr => {
+    //             if (!usr)
+    //                 done(null, false);
+    //             done(null, usr)
+    //         }, err => done(err));
+    // })
 };
